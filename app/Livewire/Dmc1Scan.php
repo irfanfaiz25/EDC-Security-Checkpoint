@@ -133,7 +133,15 @@ class Dmc1Scan extends Component
     {
         // $set = Carbon::parse($setTime, 'Asia/Jakarta');
         $now = now()->setTimezone('Asia/Jakarta');
-        $nextScan = Carbon::now()->setTime(19, 0, 0);
+
+        $morningTime = Carbon::today()->setHour(4)->setMinute(0);
+        $nightTime = Carbon::today()->setHour(19)->setMinute(0);
+
+        if ($now->between($morningTime, $nightTime, true)) {
+            $nextScan = Carbon::now()->setTime(19, 0, 0);
+        } else {
+            $nextScan = Carbon::tomorrow()->setTime(4, 0, 0);
+        }
 
         $end = $now->diffInMinutes($nextScan, false);
         $endInHours = $this->minutesToHours($end);

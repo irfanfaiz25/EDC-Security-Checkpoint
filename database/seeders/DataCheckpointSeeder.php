@@ -3,8 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\DataCheckpoint;
+use App\Models\Message;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DataCheckpointSeeder extends Seeder
 {
@@ -13,6 +16,58 @@ class DataCheckpointSeeder extends Seeder
      */
     public function run(): void
     {
+        User::create([
+            'name' => 'Muhammad Fauzi',
+            'username' => 'fauzi',
+            'password' => Hash::make('fauzi123'),
+            'department' => 'Engineering'
+        ]);
+        User::create([
+            'name' => 'Irfan Faiz',
+            'username' => 'faiz',
+            'password' => Hash::make('faiz123'),
+            'department' => 'Engineering'
+        ]);
+        User::create([
+            'name' => 'David Hidayat',
+            'username' => 'david',
+            'password' => Hash::make('david123'),
+            'department' => 'Engineering'
+        ]);
+        User::create([
+            'name' => 'Amaliiz',
+            'username' => 'amalia',
+            'password' => Hash::make('amalia123'),
+            'department' => 'Engineering'
+        ]);
+        User::create([
+            'name' => 'Aryo Kuncoro',
+            'username' => 'aryo',
+            'password' => Hash::make('aryo123'),
+            'department' => 'Security'
+        ]);
+        User::create([
+            'name' => 'Jejen',
+            'username' => 'jejen',
+            'password' => Hash::make('jejen123'),
+            'department' => 'Security'
+        ]);
+        User::create([
+            'name' => 'Taufik',
+            'username' => 'taufik',
+            'password' => Hash::make('taufik123'),
+            'department' => 'Security'
+        ]);
+        // Message::create([
+        //     'sender_id' => '1',
+        //     'receiver_id' => '2',
+        //     'message_content' => 'Halo, apakabar?'
+        // ]);
+        // Message::create([
+        //     'sender_id' => '2',
+        //     'receiver_id' => '1',
+        //     'message_content' => 'Kabar baik bolo'
+        // ]);
         DataCheckpoint::create([
             'kode_cp' => '1',
             'nama_cp' => 'CP_Pos_Security',

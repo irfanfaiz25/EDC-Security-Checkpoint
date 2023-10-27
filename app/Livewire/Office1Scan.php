@@ -133,10 +133,19 @@ class Office1Scan extends Component
     {
         // $set = Carbon::parse($setTime, 'Asia/Jakarta');
         $now = now()->setTimezone('Asia/Jakarta');
-        $nextScan = Carbon::now()->setTime(19, 0, 0);
+
+        $morningTime = Carbon::today()->setHour(4)->setMinute(0);
+        $nightTime = Carbon::today()->setHour(19)->setMinute(0);
+
+        if ($now->between($morningTime, $nightTime, true)) {
+            $nextScan = Carbon::now()->setTime(19, 0, 0);
+        } else {
+            $nextScan = Carbon::tomorrow()->setTime(4, 0, 0);
+        }
 
         $end = $now->diffInMinutes($nextScan, false);
         $endInHours = $this->minutesToHours($end);
+
 
         // $this->checkAndUpdateStatus();
 
@@ -184,7 +193,7 @@ class Office1Scan extends Component
             $namaScan = $checkpoint->first()->nama_cp;
             $remark = $this->scanCheckTime();
             $lokasiScan = $checkpoint->first()->lokasi_cp;
-            $userScan = 'John';
+            $userScan = auth()->user()->username;
 
             if (empty($timeCheck)) {
                 $checkpoint->update([

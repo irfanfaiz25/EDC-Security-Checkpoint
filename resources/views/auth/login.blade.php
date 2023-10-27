@@ -22,26 +22,9 @@
             <div class="col-md-4">
                 <div class="card login-card">
                     <div class="card-body">
-                        <div class="d-flex justify-content-center mb-5">
-                            <img src="{{ asset('img/logo/logoo.png') }}" alt="logo-astra" height="50">
-                        </div>
-                        <div class="row g-3 align-items-center justify-content-center">
-                            <div class="col-md-10">
-                                <input id="username" type="text" class="form-control border-2 border-primary"
-                                    placeholder="Enter username">
-                            </div>
-                        </div>
-                        <div class="row g-3 align-items-center justify-content-center">
-                            <div class="col-md-10">
-                                <input id="password" type="password" class="form-control border-2 border-primary"
-                                    placeholder="Enter password">
-                            </div>
-                        </div>
-                        <div class="row mt-4 d-flex justify-content-center">
-                            <div class="col-md-6 ms-0 text-center">
-                                <button class="btn btn-primary btn-login">Login</button>
-                            </div>
-                        </div>
+
+                        @livewire('wire-login')
+
                     </div>
                 </div>
             </div>

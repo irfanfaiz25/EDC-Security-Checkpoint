@@ -52,3 +52,7 @@ Route::get('/scan-history', function () {
 Route::get('/message', function () {
     return view('content.message');
 })->name('message')->middleware('auth');
+
+Route::get('/user-management', function () {
+    return view('content.user-management');
+})->name('user-management')->middleware('auth');

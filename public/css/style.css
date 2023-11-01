@@ -128,7 +128,7 @@
   visibility: hidden;
   transition: all 0.5s ease-in-out;
 }
-.badge {
+/* .badge {
   padding: 5px 10px;
   font-weight: 400;
   border-radius: 4px;
@@ -164,7 +164,7 @@
 span.badge {
   color: #ffffff;
   font-size: 14px;
-}
+} */
 .vtabs {
   display: table;
 }
@@ -2047,6 +2047,41 @@ to { opacity: 0; }
   color: white !important;
 }
 
+.text-navy {
+  color: #5873fe !important;
+}
+
+.text-navy:hover {
+  color: #0832ff !important;
+}
+
+.download-image-btn:hover {
+  cursor: pointer;
+}
+
+.x-button {
+  position: absolute;
+  right: 10px;
+  top: 20%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.x-edit-button {
+  position: absolute;
+  right: 14%;
+  top: 34.4%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.dotted-box {
+  width: 100px;
+  height: 100px;
+  border: 3px dashed #5873fe;
+  border-radius: 50%;
+}
+
 /* table.table tr th{
   background-color:#5873fe !important; 
   color:white !important;
@@ -2159,6 +2194,10 @@ to { opacity: 0; }
   overflow: auto;
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
 .card-chat {
   background: #fff;
   transition: .5s;
@@ -2201,12 +2240,12 @@ to { opacity: 0; }
 }
 
 .people-list .chat-list li:hover {
-  background: #efefef;
+  background: #c5cfffbe;
   cursor: pointer
 }
 
 .people-list .chat-list li.active {
-  background: #efefef
+  background: #c5cfffbe;
 }
 
 .people-list .chat-list li .name {
@@ -2329,6 +2368,7 @@ to { opacity: 0; }
   color:#fcfcfc;
   text-align: right;
   float: right;
+  width: max-content;
 }
 
 .chat .chat-history .other-message:after {
@@ -2431,10 +2471,70 @@ to { opacity: 0; }
   font-size: 25px;
 }
 
+.custom-button-edit {
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  background-color: #007bff00;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+.custom-button-upload {
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  background-color: #007bff00;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 35px;
+}
+
 /* Style for the hidden file input */
 #fileInput {
   display: none;
 }
+
+#user-upload {
+  width: 100px;
+}
+
+#image-message {
+  height: 150px;
+}
+
+.text-image {
+  width: 230px;
+}
+
+.btn-send-message {
+  color:#e2e2e2;
+}
+
+.message-tab {
+  margin-left: 0.7rem;
+}
+
+.dropdown {
+  cursor: pointer;
+}
+
+.img-table {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.img-upload {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
 /*
 
 =================================================

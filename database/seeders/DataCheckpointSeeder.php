@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\DataCheckpoint;
 use App\Models\Message;
+use App\Models\ScanHistory;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;

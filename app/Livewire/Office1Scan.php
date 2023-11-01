@@ -6,11 +6,13 @@ use App\Models\DataCheckpoint;
 use App\Models\ScanHistory;
 use Carbon\Carbon;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 
 class Office1Scan extends Component
 {
     use WithPagination;
+    use WithFileUploads;
 
     public $searchCheckpoint;
     public $selectedPaginationUser = 5;
@@ -20,6 +22,8 @@ class Office1Scan extends Component
     public $toastMessage;
 
     public $scanOffice1;
+
+    public $image;
 
     // public function addToArray()
     // {
